@@ -43,6 +43,6 @@ RUN gem install \
 	--no-ri --no-rdoc
 
 ADD supervisord.base.conf /etc/supervisor/conf.d/supervisor.base.conf
-ADD supervisord.conf /etc/supervisor/supervisor.conf
+ADD supervisord.conf /etc/supervisor/supervisord.conf
 
 CMD ["supervisord","-n", "-c", "/etc/supervisor/supervisord.conf"]
