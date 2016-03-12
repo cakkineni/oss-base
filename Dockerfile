@@ -42,6 +42,7 @@ RUN gem install \
 	serverspec \
 	--no-ri --no-rdoc
 
-ADD supervisord.conf /etc/supervisor/conf.d/collectd.conf
+ADD supervisord.base.conf /etc/supervisor/conf.d/supervisor.base.conf
+ADD supervisord.conf /etc/supervisor/supervisor.conf
 
-CMD ["supervisord","-n", "-c", "/etc/supervisor/conf.d/collectd.conf"]
+CMD ["supervisord","-n", "-c", "/etc/supervisor/supervisord.conf"]
